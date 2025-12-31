@@ -19,8 +19,9 @@
         </b-input-group>
       </div>
 
-      <div class="right d-flex" style="gap:1rem;">
-        <b-button class="btn btn-secondary text-uppercase font-urbanist font-urbanist-bold btn-secondary-login">Log in</b-button>
+      <div class="right d-flex" style="gap:1rem;" v-if="$route.path !== '/login'">
+        <b-button class="btn btn-secondary text-uppercase font-urbanist font-urbanist-bold btn-secondary-login">
+          <span>Log in</span></b-button>
         <b-button class="btn btn-primary text-uppercase font-urbanist font-urbanist-bold btn-primary-signup">Sign UP</b-button>
       </div>
 
@@ -40,7 +41,7 @@ export default {
   background: linear-gradient(90deg, #251a23 20%, #131313 30%);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9999;
 }
 .header-logo {
   max-width: 430px;
@@ -86,5 +87,10 @@ export default {
 .btn-primary-signup {
   width: 120px;
 }
-
+.btn-secondary-login span {
+  background-image: linear-gradient(140deg, #2fa9d5 0%, #cb75e1 99%, #cb75e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 </style>

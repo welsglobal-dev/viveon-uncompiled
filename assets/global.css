@@ -23,7 +23,14 @@ font-style: normal;
     border: unset;
 }
 
+.btn-secondary:hover {
+    background-color: #272727;
+    opacity: 0.9;
+}
+
 .btn-primary {
     background-image: linear-gradient(140deg, #2fa9d5 0%, #cb75e1 99%, #cb75e1 100%);
     border: unset;
 }
+
+/* background-image: linear-gradient(140deg, #5cf9ed 0%, #f976e5 99%, #f976e5 100%); */

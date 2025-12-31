@@ -29,9 +29,10 @@
                     <td>
                         <img v-if="item.betAvatar" :src="item.betAvatar" alt="Item image" class="me-2"
                             style="width: 25px; height: 25px; object-fit: cover;" />
-                        {{ item.bet }}</td>
+                        {{ item.bet }}
+                    </td>
                     <td>{{ item.multiplier }}</td>
-                    <td>{{ item.payout }}</td>
+                    <td class="payouts">{{ item.payout }}</td>
                 </tr>
             </tbody>
         </table>
@@ -64,14 +65,23 @@
 </script>
 
 <style>
-.latest-bets-table thead tr th {
-    background-color: #272727;
-    color: white;
-}
-.latest-bets-table tbody tr td {
-    background-color: #272727;
-    color: white;
-    border-bottom: unset;
-    font-family: "Urbanist", sans-serif;
-}
+    .latest-bets-table thead tr th {
+        background-color: #272727;
+        color: white;
+    }
+
+    .latest-bets-table tbody tr td {
+        background-color: #272727;
+        color: white;
+        border-bottom: unset;
+        font-family: "Urbanist", sans-serif;
+    }
+
+    .latest-bets-table tbody td.payouts {
+        color: #00ff12;
+    }
+
+    .latest-bets-table tbody tr:first-child td.payouts {
+        color: white;
+    }
 </style>
