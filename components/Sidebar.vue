@@ -173,6 +173,7 @@ aside.collapsed {
         padding: 8px;
     }
 
+    
     .nav-menu .menu-item.hover-green:hover > a {
         background-color: #5cf9ec33;
     }

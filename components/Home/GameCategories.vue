@@ -3,42 +3,41 @@
     <section class="mt-5">
         <div class="game-categories-tabs-wrapper d-flex align-items-center justify-content-between">
             <div class="game-categories-tabs d-flex align-items-center justify-content-start gap-1">
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/btc-round.svg" />
                     All Games
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/spades-stroke-rounded.svg" />
                     Live Casino
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/cherry-stroke-rounded.svg" />
                     Slots
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/block-game-stroke-rounded.svg" />
                     Crash
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/cards-02.svg" />
                     Table Games
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/tennis-ball-stroke-rounded.svg" />
                     Sports
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/orbit-01-stroke-rounded.svg" />
                     Roulette
                 </div>
-                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white">
+                <div class="game-category-tab text-capitalize font-urbanist font-urbanist-bold text-white hover-green">
                     <img src="@/assets/ticket-02-stroke-rounded.svg" />
                     Lottery
                 </div>
             </div>
             <div class="game-categories-sort-filter">
                 <BDropdown
-                    variant="outline-secondary"
                     :text="`Sort by: ${selected}`"
                 >
                     <BDropdownItem
@@ -127,6 +126,9 @@ import { ref } from 'vue'
         width: 20px;
         height: 20px;
     }
+    .game-category-tab.hover-green:hover {
+        background-color: #273d41;
+    }
     .game-cards-wrapper {
         flex-wrap: wrap;
     }
@@ -136,5 +138,47 @@ import { ref } from 'vue'
         height: 200px;
         object-fit: cover;
         border-radius: 8px;
+    }
+    .game-categories-sort-filter .btn-secondary{
+    border: none;
+    outline: none !important;
+    filter: drop-shadow(0 0 61px rgba(0,0,0,0.42));
+    background-color: rgba(237, 0, 126, 0.612);
+    border-radius: 8px;
+    color: white;
+    padding-right: 7rem;
+    font-family: "Urbanist", sans-serif;
+
+    }
+    .game-categories-sort-filter .btn-secondary:hover,
+    .game-categories-sort-filter .btn-secondary:focus, .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+        background-color: rgba(237, 0, 126, 0.612) !important;
+        color: white !important;
+        border: none !important;
+        outline: none !important;
+        filter: drop-shadow(0 0 61px rgba(0,0,0,0.42)) !important;
+    }
+    .dropdown-menu.show {
+        background-color: rgba(237, 0, 126, 0.612);
+        border: none;
+        width: 172px;
+    }
+    .dropdown-menu.show li .dropdown-item:hover {
+        background-color: rgba(237, 0, 126, 0.612) !important;
+        color: white !important;
+    }
+    .dropdown-menu.show li .dropdown-item{
+        color: white !important;
+        font-family: "Urbanist", sans-serif;
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
+    .dropdown-toggle::after {
+        content: url('@/assets/chevron.svg') !important;
+        position: absolute;
+        right: 0.25rem;
+        top: 3%;
+        pointer-events: none;
+        border: none !important;
     }
 </style>

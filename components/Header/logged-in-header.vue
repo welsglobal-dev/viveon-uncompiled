@@ -46,10 +46,8 @@
           <button class="user-trigger" @click.stop="toggleDropdown">
             <img src="@/assets/avatar-1.png" />
             <span class="username">jalibch</span>
-            <svg class="chevron-icon" :class="{ rotate: dropdownOpen }"
-              viewBox="0 0 16 16">
-              <path d="M1.5 5.5l6 6 6-6" />
-            </svg>
+            <img src="@/assets/chevron-down.svg" />
+          
           </button>
 
 <div v-if="dropdownOpen" class="user-dropdown" @click.stop>
@@ -225,8 +223,8 @@ export default {
 
 /* ICON IN BALANCE PILL */
 .balance-pill img {
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   margin-left: 14px;
 }
 
@@ -235,6 +233,8 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  font-family: "Urbanist", sans-serif;
+
 }
 
 .amount {
@@ -272,6 +272,8 @@ export default {
   cursor: pointer;
   white-space: nowrap;
   height: 53px;
+  font-family: "Urbanist", sans-serif;
+
 }
 
 .btn-pill:hover {
@@ -283,7 +285,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #1c1c1c;
+  background: #272727;
   padding: 0px 12px;
   border-radius: 12px;
   color: #fff;
@@ -292,8 +294,6 @@ export default {
   cursor: pointer;
   transition: all 0.2s ease;
   height: 53px;
-  border: 1px solid #f975e5;
-
 }
 
 .user-trigger:hover {

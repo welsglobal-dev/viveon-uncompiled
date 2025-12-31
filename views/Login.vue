@@ -16,7 +16,7 @@
         <!-- Tabs -->
         <div class="register-tabs mb-5">
           <button
-            class="register-tab text-uppercase font-syne"
+            class="register-tab tab-login text-uppercase font-syne"
             :class="{ active: activeTab === 'login' }"
             @click="activeTab = 'login'"
           >
@@ -24,7 +24,7 @@
           </button>
 
           <button
-            class="register-tab text-uppercase font-syne"
+            class="register-tab tab-register text-uppercase font-syne"
             :class="{ active: activeTab === 'register' }"
             @click="activeTab = 'register'"
           >
@@ -211,13 +211,28 @@ export default {
     border: unset;
     outline: unset;
     padding: 6px 2rem;
-    color: #f975e5;
     background-color: transparent;
+    color: white;
   }
 
-  .register-tab.active {
+  /* Active styles for each specific tab */
+  .register-tab.tab-login.active {
     background-color: #f975e5;
     color: #222b31;
+  }
+
+  .register-tab.tab-register.active {
+    background-color: #5bf9ed;
+    color: #222b31;
+  }
+
+  /* Inactive/tab text colors depending on the opposite active state */
+  .register-tab.tab-login:not(.active) {
+    color: #5bf9ed; /* when register is active, login text should be this */
+  }
+
+  .register-tab.tab-register:not(.active) {
+    color: #f975e5; /* when login is active, signup text should be this */
   }
 
   .form-container {
@@ -296,6 +311,15 @@ export default {
   border: 4px solid;
   display: block;
 }
+
+.user-login-submit:hover,
+.user-register-submit:hover,
+.user-login-submit:focus,
+.user-register-submit:focus {
+  box-shadow: 0 2px 8px #5bf9ed;
+  outline: none;
+  border: none !important;
+}
 .switch-text {
   color: white;
   text-align: center;
@@ -315,7 +339,9 @@ export default {
   font-size: 12px;
   margin-bottom: 8px;
 }
-
+.form-container .row {
+    --bs-gutter-x: 0.5rem;
+}
 .consent input[type="checkbox"] {
   width: 24px;
   height: 24px;
@@ -343,5 +369,7 @@ export default {
   top: 50%;
   transform: translate(-50%, -60%) rotate(45deg);
 }
-
+.form-group{
+  margin-bottom: 0.5rem;
+}
 </style>

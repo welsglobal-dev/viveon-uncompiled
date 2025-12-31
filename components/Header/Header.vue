@@ -86,4 +86,5 @@ export default {
 .btn-primary-signup {
   width: 120px;
 }
+
 </style>
